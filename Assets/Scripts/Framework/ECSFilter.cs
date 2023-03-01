@@ -29,13 +29,20 @@ namespace Asteroids.Framework
 
         public List<int> End()
         {
-            var filteredEntities = new List<int>(_ecsWorld._entities);
+            var filteredEntities = new List<int>();
 
             foreach (var includedType in _included)
             {
-                if (_ecsWorld._pools.ContainsKey(includedType))
+                if (!_ecsWorld._pools.ContainsKey(includedType)) continue;
+
+                var includedEntities = _ecsWorld._pools[includedType].GetEntities();
+
+                foreach (var includedEntity in includedEntities)
                 {
-                    filteredEntities.AddRange(_ecsWorld._pools[includedType].GetEntities());
+                    if (!filteredEntities.Contains(includedEntity))
+                    {
+                        filteredEntities.Add(includedEntity);
+                    }
                 }
             }
 
