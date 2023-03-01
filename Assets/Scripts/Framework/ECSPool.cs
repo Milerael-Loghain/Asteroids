@@ -14,7 +14,7 @@ namespace Asteroids.Framework
 
     public class ECSPool<T> : IECSPool where T: struct
     {
-        private Dictionary<int, int> _entitiesToIndex;
+        private readonly Dictionary<int, int> _entitiesToIndex = new();
         private T[] _componentInstances = Array.Empty<T>();
 
         public ref T Add(int entity)

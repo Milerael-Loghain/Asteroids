@@ -6,8 +6,8 @@ namespace Asteroids.Framework
 {
     public class ECSWorld
     {
-        private List<int> _entities = new();
-        private Dictionary<Type, IECSPool> _pools = new();
+        internal List<int> _entities = new();
+        internal Dictionary<Type, IECSPool> _pools = new();
 
         public int AddEntity()
         {
@@ -51,37 +51,8 @@ namespace Asteroids.Framework
 
         public ECSFilter Filter<T>() where T: struct
         {
-            var filter = new ECSFilter();
+            var filter = new ECSFilter(this);
             return filter.Inc<T>();
-        }
-
-        public List<int> End(ECSFilter ecsFilter)
-        {
-            var filteredEntities = new List<int>(_entities);
-
-            foreach (var includedType in ecsFilter.Included)
-            {
-                if (_pools.ContainsKey(includedType))
-                {
-                    filteredEntities.AddRange(_pools[includedType].GetEntities());
-                }
-            }
-
-            foreach (var excludedType in ecsFilter.Excluded)
-            {
-                if (!_pools.ContainsKey(excludedType)) continue;
-
-                var excludedEntities = _pools[excludedType].GetEntities();
-                foreach (var excludedEntity in excludedEntities)
-                {
-                    if (filteredEntities.Contains(excludedEntity))
-                    {
-                        filteredEntities.Add(excludedEntity);
-                    }
-                }
-            }
-
-            return filteredEntities;
         }
     }
 }
