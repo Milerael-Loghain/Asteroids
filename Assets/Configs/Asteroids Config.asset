@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e310d6f338694ed0aaa066d4ec617280, type: 3}
+  m_Name: Asteroids Config
+  m_EditorClassIdentifier: 
+  _wholeAsteroidPrefab: {fileID: 2964304236248164568, guid: 1cd89d06b713746bca7e3e2875c4ef47, type: 3}
+  _asteroidWreckPrefab: {fileID: 1142368049481472014, guid: a29de2bb720c94c3ba25a9165bb29597, type: 3}
+  _wholeAsteroidVelocity: 1
+  _asteroidWreckVelocity: 2
+  _asteroidSpawnCooldown: 4

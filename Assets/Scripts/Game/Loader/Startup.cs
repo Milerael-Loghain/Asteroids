@@ -1,5 +1,6 @@
 using Asteroids.Framework;
 using Asteroids.Game.Data;
+using Asteroids.Game.Systems;
 using UnityEngine;
 
 namespace Asteroids.Game.Loader
@@ -17,12 +18,32 @@ namespace Asteroids.Game.Loader
         {
             _ecsWorld = new ECSWorld();
 
-            _initSystems = new ECSSystems(_ecsWorld, _configContainer);
+            _initSystems = new ECSSystems(_ecsWorld, _configContainer)
+                .Add(new PlayerInitSystem())
+                .Add(new PlayerInputInitSystem())
+                .Add(new AsteroidSpawnInitSystem());
+
             _initSystems.Init();
 
-            _updateSystems = new ECSSystems(_ecsWorld, _configContainer);
+            _updateSystems = new ECSSystems(_ecsWorld, _configContainer)
+                .Add(new PlayerInputSystem())
+                .Add(new AsteroidSpawnSystem())
+                .Add(new PlayerPrimaryShootSystem())
+                .Add(new AsteroidSpawnCooldownSystem())
+                .Add(new PrimaryShootCooldownSystem())
+                .Add(new AsteroidWreckSpawnSystem())
+                .Add(new AutoDestroySystem())
+                .Add(new ObjectDestroySystem());
 
-            _fixedUpdateSystems = new ECSSystems(_ecsWorld, _configContainer);
+            _fixedUpdateSystems = new ECSSystems(_ecsWorld, _configContainer)
+                .Add(new PlayerMovementSystem())
+                .Add(new ApplyAccelerationSystem())
+                .Add(new VelocitySlowdownSystem())
+                .Add(new ApplyVelocitySystem())
+                .Add(new WrapAroundTeleportationSystem())
+                .Add(new RotationSystem())
+                .Add(new ApplyPositionSystem())
+                .Add(new PrimaryGunBulletSystem());
         }
 
         private void Update()

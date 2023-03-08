@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 570fb737f3b14773aa927f4a3e698438, type: 3}
+  m_Name: Primary Gun Config
+  m_EditorClassIdentifier: 
+  _primaryBulletPrefab: {fileID: 3387841659299367287, guid: 6fe603c7d78f045c3a29a980e33e0aa9, type: 3}
+  _primaryBulletVelocity: 5
+  _primaryBulletLayerMask:
+    serializedVersion: 2
+    m_Bits: 8
+  _primaryBulletCooldown: 0.5
+  _primaryBulletLifetime: 5
+  _primaryBulletRadius: 0.1

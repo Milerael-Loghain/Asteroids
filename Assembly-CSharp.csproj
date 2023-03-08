@@ -11,7 +11,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>Asteroids</RootNamespace>
     <ProjectGuid>{82132670-eb45-3602-7ea2-855fcd841b8f}</ProjectGuid>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
@@ -45,19 +45,62 @@
     <Analyzer Include="/Applications/Unity/Hub/Editor/2022.2.5f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets/Scripts/Game/Components/VelocityComponent.cs" />
+     <Compile Include="Assets/Scripts/Game/Systems/ApplyAccelerationSystem.cs" />
+     <Compile Include="Assets/Scripts/Game/Systems/PrimaryShootCooldownSystem.cs" />
+     <Compile Include="Assets/Scripts/Game/Systems/PlayerInputInitSystem.cs" />
+     <Compile Include="Assets/Scripts/Game/Data/PlayerConfig.cs" />
+     <Compile Include="Assets/Scripts/Game/Components/AutoDestroyComponent.cs" />
+     <Compile Include="Assets/Scripts/Game/Systems/RotationSystem.cs" />
+     <Compile Include="Assets/Scripts/Game/Systems/ApplyPositionSystem.cs" />
+     <Compile Include="Assets/Scripts/Game/Systems/AsteroidSpawnInitSystem.cs" />
+     <Compile Include="Assets/Scripts/Game/Systems/AsteroidSpawnSystem.cs" />
+     <Compile Include="Assets/Scripts/Game/Components/ConstantVelocityComponent.cs" />
      <Compile Include="Assets/Scripts/Game/Data/ConfigContainer.cs" />
+     <Compile Include="Assets/Scripts/Game/Data/AsteroidsConfig.cs" />
+     <Compile Include="Assets/Scripts/Game/Systems/AsteroidWreckSpawnSystem.cs" />
+     <Compile Include="Assets/Scripts/Game/Components/AccelerationComponent.cs" />
+     <Compile Include="Assets/Scripts/Game/Components/RotationComponent.cs" />
+     <Compile Include="Assets/Scripts/Game/Components/BulletComponent.cs" />
+     <Compile Include="Assets/Scripts/Game/Components/Rigidbody2DComponent.cs" />
+     <Compile Include="Assets/Scripts/Game/Data/SpaceConfig.cs" />
+     <Compile Include="Assets/Scripts/Game/Systems/PlayerInputSystem.cs" />
+     <Compile Include="Assets/Scripts/Game/Components/AsteroidSpawner.cs" />
+     <Compile Include="Assets/Scripts/Game/Data/PrimaryGunConfig.cs" />
+     <Compile Include="Assets/Scripts/Game/Systems/PrimaryGunBulletSystem.cs" />
      <Compile Include="Assets/Scripts/Game/Loader/Startup.cs" />
-     <Compile Include="Assets/Scripts/Framework/ECSWorld.cs" />
-     <Compile Include="Assets/Scripts/Framework/ECSPool.cs" />
-     <Compile Include="Assets/Scripts/Framework/ECSFilter.cs" />
-     <Compile Include="Assets/Scripts/Framework/ECSSystems.cs" />
+     <Compile Include="Assets/Scripts/Game/Components/RendererReferenceComponent.cs" />
+     <Compile Include="Assets/Scripts/Game/Components/DestroyComponent.cs" />
+     <Compile Include="Assets/Scripts/Game/Components/PlayerInputComponent.cs" />
+     <Compile Include="Assets/Scripts/Game/Systems/PlayerMovementSystem.cs" />
+     <Compile Include="Assets/Scripts/Game/Systems/WrapAroundTeleportationSystem.cs" />
+     <Compile Include="Assets/Scripts/Game/Components/WrapAroundComponent.cs" />
+     <Compile Include="Assets/Scripts/Game/MonoBehaviours/EntityReference.cs" />
+     <Compile Include="Assets/Scripts/Game/Systems/ObjectDestroySystem.cs" />
+     <Compile Include="Assets/Scripts/Game/Systems/ApplyVelocitySystem.cs" />
+     <Compile Include="Assets/Scripts/Game/Systems/AsteroidSpawnCooldownSystem.cs" />
+     <Compile Include="Assets/Scripts/Game/Components/PrimaryShootCooldownComponent.cs" />
+     <Compile Include="Assets/Scripts/Game/Data/UFOConfig.cs" />
+     <Compile Include="Assets/Scripts/Game/Data/InputConfig.cs" />
+     <Compile Include="Assets/Scripts/Game/Systems/PlayerPrimaryShootSystem.cs" />
+     <Compile Include="Assets/Scripts/Game/Systems/AutoDestroySystem.cs" />
+     <Compile Include="Assets/Scripts/Game/Components/AsteroidComponent.cs" />
+     <Compile Include="Assets/Scripts/Game/Systems/PlayerInitSystem.cs" />
+     <Compile Include="Assets/Scripts/Game/Components/PlayerComponent.cs" />
+     <Compile Include="Assets/Scripts/Game/Components/AsteroidsSpawnCooldown.cs" />
+     <Compile Include="Assets/Scripts/Game/Systems/VelocitySlowdownSystem.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/Scripts/Game" />
      <Folder Include="Assets/Scenes" />
      <Folder Include="Assets/Scripts/Game/Loader" />
-     <Folder Include="Assets/Scripts/Framework" />
+     <Folder Include="Assets/Configs" />
+     <Folder Include="Assets/Scripts/Game/Components" />
+     <Folder Include="Assets/Prefabs" />
+     <Folder Include="Assets/Configs/Input" />
      <Folder Include="Assets/Scripts" />
+     <Folder Include="Assets/Scripts/Game/Systems" />
      <Folder Include="Assets/Scripts/Game/Data" />
+     <Folder Include="Assets/Scripts/Game/MonoBehaviours" />
      <Reference Include="UnityEngine">
      <HintPath>/Applications/Unity/Hub/Editor/2022.2.5f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>
@@ -768,6 +811,10 @@
      </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Framework.csproj">
+      <Project>{3c6079c2-57d8-346a-cc79-72ad959a2853}</Project>
+      <Name>Framework</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
