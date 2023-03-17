@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Asteroids.Game.Data
 {
@@ -9,10 +10,15 @@ namespace Asteroids.Game.Data
 
         public float UfoVelocity => _ufoVelocity;
 
+        public float UfoSpawnCooldown => _ufoSpawnCooldown;
+
         [SerializeField]
         private GameObject _ufoPrefab;
 
         [SerializeField]
         private float _ufoVelocity;
+
+        [SerializeField]
+        private float _ufoSpawnCooldown;
     }
 }

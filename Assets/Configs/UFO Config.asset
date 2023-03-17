@@ -12,5 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 526e80da6eaa4c38a25827993dc70394, type: 3}
   m_Name: UFO Config
   m_EditorClassIdentifier: 
-  _ufoPrefab: {fileID: 0}
-  _ufoVelocity: 0
+  _ufoPrefab: {fileID: 7325315643340318360, guid: aa37b3af9ea9f476bbbd3c37126130a4, type: 3}
+  _ufoVelocity: 1
+  _ufoSpawnCooldown: 5

@@ -21,7 +21,8 @@ namespace Asteroids.Game.Loader
             _initSystems = new ECSSystems(_ecsWorld, _configContainer)
                 .Add(new PlayerInitSystem())
                 .Add(new PlayerInputInitSystem())
-                .Add(new AsteroidSpawnInitSystem());
+                .Add(new AsteroidSpawnInitSystem())
+                .Add(new UFOSpawnInitSystem());
 
             _initSystems.Init();
 
@@ -32,12 +33,15 @@ namespace Asteroids.Game.Loader
                 .Add(new AsteroidSpawnCooldownSystem())
                 .Add(new PrimaryShootCooldownSystem())
                 .Add(new AsteroidWreckSpawnSystem())
+                .Add(new UFOSpawnSystem())
+                .Add(new UFOSpawnCooldownSystem())
                 .Add(new AutoDestroySystem())
                 .Add(new ObjectDestroySystem());
 
             _fixedUpdateSystems = new ECSSystems(_ecsWorld, _configContainer)
                 .Add(new PlayerMovementSystem())
                 .Add(new ApplyAccelerationSystem())
+                .Add(new UFOAimSystem())
                 .Add(new VelocitySlowdownSystem())
                 .Add(new ApplyVelocitySystem())
                 .Add(new WrapAroundTeleportationSystem())
