@@ -17,3 +17,4 @@ MonoBehaviour:
   _playerConfig: {fileID: 11400000, guid: 7b4b1c3807c5744f581b5a22592f917a, type: 2}
   _asteroidsConfig: {fileID: 11400000, guid: 8178d298c7ec74ef09d99bee12cfb4f7, type: 2}
   _ufoConfig: {fileID: 11400000, guid: 46fe8460c3feb4f72b67d213cb715135, type: 2}
+  _uiConfig: {fileID: 11400000, guid: 8ee8bad9969d949ea809e033635169b4, type: 2}

@@ -1,6 +1,6 @@
 using Asteroids.Framework;
 using Asteroids.Game.Components;
-using Asteroids.Scripts.Game.MonoBehaviours;
+using Asteroids.Game.MonoBehaviours;
 using UnityEngine;
 
 namespace Asteroids.Game.Systems

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Asteroids.Scripts.Game.MonoBehaviours
+namespace Asteroids.Game.MonoBehaviours
 {
     public class EntityReference : MonoBehaviour
     {

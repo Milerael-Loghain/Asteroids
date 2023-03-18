@@ -22,7 +22,8 @@ namespace Asteroids.Game.Loader
                 .Add(new PlayerInitSystem())
                 .Add(new PlayerInputInitSystem())
                 .Add(new AsteroidSpawnInitSystem())
-                .Add(new UFOSpawnInitSystem());
+                .Add(new UFOSpawnInitSystem())
+                .Add(new HudInitSystem());
 
             _initSystems.Init();
 
@@ -47,6 +48,7 @@ namespace Asteroids.Game.Loader
                 .Add(new WrapAroundTeleportationSystem())
                 .Add(new RotationSystem())
                 .Add(new ApplyPositionSystem())
+                .Add(new HudUpdateSystem())
                 .Add(new PrimaryGunBulletSystem());
         }
 

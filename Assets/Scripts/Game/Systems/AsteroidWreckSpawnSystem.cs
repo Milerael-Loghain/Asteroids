@@ -1,7 +1,7 @@
 using Asteroids.Framework;
 using Asteroids.Game.Components;
 using Asteroids.Game.Data;
-using Asteroids.Scripts.Game.MonoBehaviours;
+using Asteroids.Game.MonoBehaviours;
 using UnityEngine;
 
 namespace Asteroids.Game.Systems

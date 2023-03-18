@@ -15,6 +15,8 @@ namespace Asteroids.Game.Data
 
         public UFOConfig UfoConfig => _ufoConfig;
 
+        public UIConfig UIConfig => _uiConfig;
+
         [SerializeField]
         private InputConfig _inputConfig;
 
@@ -29,5 +31,8 @@ namespace Asteroids.Game.Data
 
         [SerializeField]
         private UFOConfig _ufoConfig;
+
+        [SerializeField]
+        private UIConfig _uiConfig;
     }
 }
