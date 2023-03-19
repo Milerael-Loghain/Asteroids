@@ -41,6 +41,7 @@ namespace Asteroids.Game.Loader
                 .Add(new UFOSpawnSystem())
                 .Add(new UFOSpawnCooldownSystem())
                 .Add(new AutoDestroySystem())
+                .Add(new PlayerScoreSystem())
                 .Add(new GameOverSystem())
                 .Add(new ObjectDestroySystem());
 

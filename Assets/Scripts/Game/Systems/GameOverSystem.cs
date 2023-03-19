@@ -9,14 +9,18 @@ namespace Asteroids.Game.Systems
     {
         public void Run(IECSSystems systems)
         {
-            var playerFilter = systems.ECSWorld.Filter<PlayerComponent>().Inc<DestroyComponent>().End();
+            var playerFilter = systems.ECSWorld.Filter<PlayerComponent>().Inc<PlayerScoreComponent>().Inc<DestroyComponent>().End();
+
+            var playerScorePool = systems.ECSWorld.GetPool<PlayerScoreComponent>();
 
             foreach (var playerEntity in playerFilter)
             {
                 Time.timeScale = 0;
 
+                ref var playerScore = ref playerScorePool.Get(playerEntity);
                 var uiConfig = systems.GetSharedData<ConfigContainer>().UIConfig;
-                Object.Instantiate(uiConfig.GameOverScreenPrefab);
+                var gameOverScreen = Object.Instantiate(uiConfig.GameOverScreenPrefab);
+                gameOverScreen.Init(playerScore.value);
             }
         }
     }

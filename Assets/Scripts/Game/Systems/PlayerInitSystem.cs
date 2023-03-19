@@ -19,6 +19,7 @@ namespace Asteroids.Game.Systems
             var rendererComponentPool = systems.ECSWorld.GetPool<RendererReferenceComponent>();
             var wrapAroundComponentPool = systems.ECSWorld.GetPool<WrapAroundComponent>();
             var laserShootComponentPool = systems.ECSWorld.GetPool<PlayerLaserShootComponent>();
+            var playerScoreComponentPool = systems.ECSWorld.GetPool<PlayerScoreComponent>();
 
             var playerEntity = systems.ECSWorld.AddEntity();
             var playerGO = Object.Instantiate(playerConfig.PlayerPrefab);
@@ -35,6 +36,7 @@ namespace Asteroids.Game.Systems
             rotationComponentPool.Add(playerEntity);
             wrapAroundComponentPool.Add(playerEntity);
             laserShootComponentPool.Add(playerEntity);
+            playerScoreComponentPool.Add(playerEntity);
 
             ref var rendererComponent = ref rendererComponentPool.Add(playerEntity);
             rendererComponent.value = playerGO.GetComponent<Renderer>();
