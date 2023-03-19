@@ -1,3 +1,4 @@
+using System;
 using Asteroids.Framework;
 using Asteroids.Game.Data;
 using Asteroids.Game.Systems;
@@ -56,7 +57,8 @@ namespace Asteroids.Game.Loader
                 .Add(new ApplyPositionSystem())
                 .Add(new HudUpdateSystem())
                 .Add(new PrimaryGunBulletSystem())
-                .Add(new LaserBulletSystem());
+                .Add(new LaserBulletSystem())
+                .Add(new PlayerDamageSystem());
         }
 
         private void Update()

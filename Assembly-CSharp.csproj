@@ -50,6 +50,7 @@
      <Compile Include="Assets/Scripts/Game/Systems/PlayerLaserShootSystem.cs" />
      <Compile Include="Assets/Scripts/Game/Systems/PrimaryShootCooldownSystem.cs" />
      <Compile Include="Assets/Scripts/Game/Systems/PlayerInputInitSystem.cs" />
+     <Compile Include="Assets/Scripts/Game/Components/PlayerDamageComponent.cs" />
      <Compile Include="Assets/Scripts/Game/Data/PlayerConfig.cs" />
      <Compile Include="Assets/Scripts/Game/Components/AutoDestroyComponent.cs" />
      <Compile Include="Assets/Scripts/Game/Systems/RotationSystem.cs" />
@@ -73,6 +74,7 @@
      <Compile Include="Assets/Scripts/Game/Data/UIConfig.cs" />
      <Compile Include="Assets/Scripts/Game/Components/UFOSpawnerComponent.cs" />
      <Compile Include="Assets/Scripts/Game/Components/Rigidbody2DComponent.cs" />
+     <Compile Include="Assets/Scripts/Game/Components/ScoreBearerComponent.cs" />
      <Compile Include="Assets/Scripts/Game/Data/SpaceConfig.cs" />
      <Compile Include="Assets/Scripts/Game/Systems/PlayerInputSystem.cs" />
      <Compile Include="Assets/Scripts/Game/Components/AsteroidSpawner.cs" />
@@ -94,6 +96,7 @@
      <Compile Include="Assets/Scripts/Game/MonoBehaviours/EntityReference.cs" />
      <Compile Include="Assets/Scripts/Game/Systems/ObjectDestroySystem.cs" />
      <Compile Include="Assets/Scripts/Game/Systems/ApplyVelocitySystem.cs" />
+     <Compile Include="Assets/Scripts/Game/Systems/PlayerScoreSystem.cs" />
      <Compile Include="Assets/Scripts/Game/Components/PlayerLaserShootComponent.cs" />
      <Compile Include="Assets/Scripts/Game/Systems/AsteroidSpawnCooldownSystem.cs" />
      <Compile Include="Assets/Scripts/Game/Systems/UFOSpawnInitSystem.cs" />
@@ -101,6 +104,7 @@
      <Compile Include="Assets/Scripts/Game/Data/UFOConfig.cs" />
      <Compile Include="Assets/Scripts/Game/Data/InputConfig.cs" />
      <Compile Include="Assets/Scripts/Game/Components/LaserShootCooldownComponent.cs" />
+     <Compile Include="Assets/Scripts/Game/Systems/PlayerDamageSystem.cs" />
      <Compile Include="Assets/Scripts/Game/Systems/PlayerPrimaryShootSystem.cs" />
      <Compile Include="Assets/Scripts/Game/Systems/AutoDestroySystem.cs" />
      <Compile Include="Assets/Scripts/Game/Components/AsteroidComponent.cs" />
@@ -108,12 +112,11 @@
      <Compile Include="Assets/Scripts/Game/Systems/PlayerInitSystem.cs" />
      <Compile Include="Assets/Scripts/Game/Components/PlayerComponent.cs" />
      <Compile Include="Assets/Scripts/Game/Components/LaserBulletComponent.cs" />
+     <Compile Include="Assets/Scripts/Game/Components/PlayerScoreComponent.cs" />
      <Compile Include="Assets/Scripts/Game/Systems/UFOSpawnSystem.cs" />
      <Compile Include="Assets/Scripts/Game/Components/AsteroidsSpawnCooldown.cs" />
      <Compile Include="Assets/Scripts/Game/Systems/LaserShootCooldownSystem.cs" />
      <Compile Include="Assets/Scripts/Game/Systems/VelocitySlowdownSystem.cs" />
-     <Compile Include="Assets\Scripts\Game\Components\PlayerScoreComponent.cs" />
-     <Compile Include="Assets\Scripts\Game\Systems\PlayerScoreSystem.cs" />
      <Folder Include="Assets" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Overlay.shader" />
@@ -128,6 +131,7 @@
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF SSD.shader" />
      <Folder Include="Assets/Configs" />
      <Folder Include="Assets/TextMesh Pro/Resources" />
+     <Folder Include="Assets/Scripts/Game/Components" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Surface-Mobile.shader" />
      <Folder Include="Assets/TextMesh Pro" />
      <Folder Include="Assets/Prefabs" />
@@ -147,6 +151,7 @@
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF-Mobile Masking.shader" />
      <Folder Include="Assets/Scripts" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader" />
+     <Folder Include="Assets/Scripts/Game/Systems" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_Bitmap-Mobile.shader" />
      <None Include="Assets/TextMesh Pro/Fonts/LiberationSans - OFL.txt" />
      <Folder Include="Assets/Scripts/Game/Data" />

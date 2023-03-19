@@ -15,3 +15,4 @@ MonoBehaviour:
   _ufoPrefab: {fileID: 7325315643340318360, guid: aa37b3af9ea9f476bbbd3c37126130a4, type: 3}
   _ufoVelocity: 1
   _ufoSpawnCooldown: 5
+  _damageRadius: 0.5

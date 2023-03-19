@@ -12,6 +12,8 @@ namespace Asteroids.Game.Data
 
         public float UfoSpawnCooldown => _ufoSpawnCooldown;
 
+        public float DamageRadius => _damageRadius;
+
         [SerializeField]
         private GameObject _ufoPrefab;
 
@@ -20,5 +22,8 @@ namespace Asteroids.Game.Data
 
         [SerializeField]
         private float _ufoSpawnCooldown;
+
+        [SerializeField]
+        private float _damageRadius;
     }
 }

@@ -8,7 +8,7 @@ namespace Asteroids.Game.Systems
         public void Run(IECSSystems systems)
         {
             var playerFilter = systems.ECSWorld.Filter<PlayerScoreComponent>().End();
-            var destroyFilter = systems.ECSWorld.Filter<DestroyComponent>().End();
+            var destroyFilter = systems.ECSWorld.Filter<DestroyComponent>().Inc<ScoreBearerComponent>().End();
 
             var playerScorePool = systems.ECSWorld.GetPool<PlayerScoreComponent>();
 

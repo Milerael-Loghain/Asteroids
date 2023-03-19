@@ -22,6 +22,8 @@ namespace Asteroids.Game.Systems
             var rendererPool = systems.ECSWorld.GetPool<RendererReferenceComponent>();
             var velocityPool = systems.ECSWorld.GetPool<VelocityComponent>();
             var constantVelocityPool = systems.ECSWorld.GetPool<ConstantVelocityComponent>();
+            var playerDamagePool = systems.ECSWorld.GetPool<PlayerDamageComponent>();
+            var scoreBearerPool = systems.ECSWorld.GetPool<ScoreBearerComponent>();
 
             var ufoConfig = systems.GetSharedData<ConfigContainer>().UfoConfig;
 
@@ -58,6 +60,11 @@ namespace Asteroids.Game.Systems
                 ref var rigidBody2DComponent = ref rigidbody2dPool.Add(ufoEntity);
                 rigidBody2DComponent.rb2d = UFORB2d;
                 rigidBody2DComponent.position = worldPosition;
+
+                ref var playerDamageComponent = ref playerDamagePool.Add(ufoEntity);
+                playerDamageComponent.damageRadius = ufoConfig.DamageRadius;
+
+                scoreBearerPool.Add(ufoEntity);
 
                 velocityPool.Add(ufoEntity);
 

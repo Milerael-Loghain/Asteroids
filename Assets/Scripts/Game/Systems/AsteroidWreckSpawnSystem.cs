@@ -19,6 +19,8 @@ namespace Asteroids.Game.Systems
             var rendererPool = systems.ECSWorld.GetPool<RendererReferenceComponent>();
             var velocityPool = systems.ECSWorld.GetPool<VelocityComponent>();
             var constantVelocityPool = systems.ECSWorld.GetPool<ConstantVelocityComponent>();
+            var playerDamagePool = systems.ECSWorld.GetPool<PlayerDamageComponent>();
+            var scoreBearerPool = systems.ECSWorld.GetPool<ScoreBearerComponent>();
 
             var asteroidsConfig = systems.GetSharedData<ConfigContainer>().AsteroidsConfig;
 
@@ -53,6 +55,11 @@ namespace Asteroids.Game.Systems
 
                     ref var velocityComponent = ref velocityPool.Add(asteroidWreckEntity);
                     velocityComponent.value = asteroidsConfig.AsteroidWreckVelocity * velocityDirection;
+
+                    ref var playerDamageComponent = ref playerDamagePool.Add(asteroidWreckEntity);
+                    playerDamageComponent.damageRadius = asteroidsConfig.AsteroidWreckDamageRadius;
+
+                    scoreBearerPool.Add(asteroidWreckEntity);
                 }
             }
         }

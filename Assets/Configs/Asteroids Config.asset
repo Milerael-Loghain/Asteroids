@@ -16,4 +16,6 @@ MonoBehaviour:
   _asteroidWreckPrefab: {fileID: 1142368049481472014, guid: a29de2bb720c94c3ba25a9165bb29597, type: 3}
   _wholeAsteroidVelocity: 1
   _asteroidWreckVelocity: 2
+  _asteroidWholeDamageRadius: 0.5
+  _asteroidWreckDamageRadius: 0.25
   _asteroidSpawnCooldown: 4

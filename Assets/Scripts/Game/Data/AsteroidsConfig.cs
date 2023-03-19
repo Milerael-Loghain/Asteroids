@@ -16,6 +16,10 @@ namespace Asteroids.Game.Data
 
         public float AsteroidSpawnCooldown => _asteroidSpawnCooldown;
 
+        public float AsteroidWholeDamageRadius => _asteroidWholeDamageRadius;
+
+        public float AsteroidWreckDamageRadius => _asteroidWreckDamageRadius;
+
         [SerializeField]
         private GameObject _wholeAsteroidPrefab;
 
@@ -29,6 +33,13 @@ namespace Asteroids.Game.Data
         private float _asteroidWreckVelocity;
 
         [SerializeField]
+        private float _asteroidWholeDamageRadius;
+
+        [SerializeField]
+        private float _asteroidWreckDamageRadius;
+
+        [SerializeField]
         private float _asteroidSpawnCooldown;
+
     }
 }

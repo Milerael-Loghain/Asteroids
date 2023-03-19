@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   _playerPrefab: {fileID: 41692266748132508, guid: 1d91c5456aabc4dd0a57b3c2d0758e03, type: 3}
   _acceleration: 0.4
   rotationVelocity: 300
