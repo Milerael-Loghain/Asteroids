@@ -22,6 +22,7 @@ namespace Asteroids.Game.Systems
                 ref var playerInput = ref playerInputComponentPool.Get(entity);
                 playerInput.moveValue = inputConfig.MoveInputActionReference.action.ReadValue<Vector2>();
                 playerInput.primaryShootValue = inputConfig.PrimaryShootInputActionReference.action.triggered;
+                playerInput.secondaryShootValue = inputConfig.SecondaryShootInputActionReference.action.triggered;
             }
         }
     }

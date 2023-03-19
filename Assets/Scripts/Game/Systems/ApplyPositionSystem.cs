@@ -7,7 +7,7 @@ namespace Asteroids.Game.Systems
     {
         public void Run(IECSSystems systems)
         {
-            var filter = systems.ECSWorld.Filter<Rigidbody2DComponent>().End();
+            var filter = systems.ECSWorld.Filter<Rigidbody2DComponent>().Exc<NonMovableComponent>().End();
             var rigidbody2DReferencePool = systems.ECSWorld.GetPool<Rigidbody2DComponent>();
 
 

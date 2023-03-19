@@ -16,6 +16,7 @@ namespace Asteroids.Game.Loader
 
         private void Awake()
         {
+            Time.timeScale = 1;
             _ecsWorld = new ECSWorld();
 
             _initSystems = new ECSSystems(_ecsWorld, _configContainer)
@@ -31,12 +32,16 @@ namespace Asteroids.Game.Loader
                 .Add(new PlayerInputSystem())
                 .Add(new AsteroidSpawnSystem())
                 .Add(new PlayerPrimaryShootSystem())
+                .Add(new PlayerLaserShootSystem())
                 .Add(new AsteroidSpawnCooldownSystem())
                 .Add(new PrimaryShootCooldownSystem())
+                .Add(new LaserShootCooldownSystem())
+                .Add(new LaserShootChargesCooldownSystem())
                 .Add(new AsteroidWreckSpawnSystem())
                 .Add(new UFOSpawnSystem())
                 .Add(new UFOSpawnCooldownSystem())
                 .Add(new AutoDestroySystem())
+                .Add(new GameOverSystem())
                 .Add(new ObjectDestroySystem());
 
             _fixedUpdateSystems = new ECSSystems(_ecsWorld, _configContainer)
@@ -49,7 +54,8 @@ namespace Asteroids.Game.Loader
                 .Add(new RotationSystem())
                 .Add(new ApplyPositionSystem())
                 .Add(new HudUpdateSystem())
-                .Add(new PrimaryGunBulletSystem());
+                .Add(new PrimaryGunBulletSystem())
+                .Add(new LaserBulletSystem());
         }
 
         private void Update()

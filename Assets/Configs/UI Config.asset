@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: UI Config
   m_EditorClassIdentifier: 
   _playerHudPrefab: {fileID: 3731893722717066274, guid: 139dc49ad32724e57ac0d9651d8a02e8, type: 3}
+  _gameOverScreenPrefab: {fileID: 7822371066565229819, guid: e346407557e1f4603864a79210695696, type: 3}

@@ -14,6 +14,7 @@ namespace Asteroids.Game.Data
         public float RotationVelocity => rotationVelocity;
 
         public PrimaryGunConfig PrimaryGunConfig => _primaryGunConfig;
+        public LaserGunConfig LaserGunConfig => _laserGunConfig;
 
         [SerializeField]
         private LayerMask _playerLayers;
@@ -29,5 +30,8 @@ namespace Asteroids.Game.Data
 
         [SerializeField]
         private PrimaryGunConfig _primaryGunConfig;
+
+        [SerializeField]
+        private LaserGunConfig _laserGunConfig;
     }
 }

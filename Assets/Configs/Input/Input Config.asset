@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveInputActionReference: {fileID: 5656203189138821688, guid: 32bbeb099e6e24262856d28500c3920c, type: 3}
   primaryShootInputActionReference: {fileID: -5430741394124601122, guid: 32bbeb099e6e24262856d28500c3920c, type: 3}
-  secondaryShootInputActionReference: {fileID: 0}
+  secondaryShootInputActionReference: {fileID: -3701689262831909393, guid: 32bbeb099e6e24262856d28500c3920c, type: 3}

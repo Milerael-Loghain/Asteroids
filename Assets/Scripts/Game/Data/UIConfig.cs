@@ -8,7 +8,12 @@ namespace Asteroids.Game.Data
     {
         public PlayerHud PlayerHudPrefab => _playerHudPrefab;
 
+        public GameOverScreen GameOverScreenPrefab => _gameOverScreenPrefab;
+
         [SerializeField]
         private PlayerHud _playerHudPrefab;
+
+        [SerializeField]
+        private GameOverScreen _gameOverScreenPrefab;
     }
 }

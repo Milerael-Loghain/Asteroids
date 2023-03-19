@@ -15,6 +15,7 @@ namespace Asteroids.Game.Systems
 
             inputConfig.MoveInputActionReference.action.Enable();
             inputConfig.PrimaryShootInputActionReference.action.Enable();
+            inputConfig.SecondaryShootInputActionReference.action.Enable();
 
             foreach (var entity in filter)
             {
